@@ -24,7 +24,7 @@ export const TASKS = [
     name: 'Bad',
     short: 'Bad',
     icon: 'drop',
-    desc: 'Toalett, servant, dusj, speil og gulv.',
+    desc: 'Toalettet, vasken, dusjen, speilet og gulvet.',
   },
   {
     id: 'stovsuging',
