@@ -1,0 +1,38 @@
+rules_version = '2';
+
+// Lim inn hele denne fila under Firestore Database → Rules i Firebase-konsollen og trykk Publish.
+// Alle kan lese. Alle kan krysse av og angre, men bare med gyldige navn og oppgaver.
+// Ingen kan slette. Legger dere til eller endrer navn i config.js, må listene under oppdateres også.
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isPerson(p) {
+      return p in ['adne', 'kasper', 'benjamin', 'jonas'];
+    }
+
+    function isTask(t) {
+      return t in ['kjokken', 'bad', 'stovsuging', 'oppvask'];
+    }
+
+    match /completions/{id} {
+      allow read: if true;
+
+      allow create, update: if
+        id.matches('^[0-9]{4}-W[0-9]{2}_[a-z]+$')
+        && request.resource.data.keys().hasOnly(['week', 'person', 'task', 'done', 'markedBy', 'doneAt'])
+        && id == request.resource.data.week + '_' + request.resource.data.person
+        && isPerson(request.resource.data.person)
+        && isTask(request.resource.data.task)
+        && request.resource.data.done is bool
+        && isPerson(request.resource.data.markedBy)
+        && (request.resource.data.doneAt == null || request.resource.data.doneAt == request.time);
+
+      allow delete: if false;
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

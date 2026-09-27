@@ -1,0 +1,14 @@
+{
+  "name": "Vaskelista",
+  "short_name": "Vaskelista",
+  "description": "Vaskerotasjonen i kollektivet.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#F3F6F5",
+  "theme_color": "#1F7A64",
+  "lang": "nb",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

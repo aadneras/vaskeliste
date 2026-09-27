@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Vaskelista</title>
+  <meta name="description" content="Vaskerotasjonen i kollektivet: hvem har hvilken oppgave, hva er gjort og hvem som leder.">
+  <meta name="theme-color" content="#F3F6F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0E1A17" media="(prefers-color-scheme: dark)">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Vaskelista">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <p class="eyebrow">Kollektivet</p>
+      <h1>Vaskelista</h1>
+      <div class="me" role="group" aria-labelledby="me-label">
+        <span id="me-label" class="me-label">Jeg er</span>
+        <div id="me-chips" class="chips"></div>
+      </div>
+      <p id="me-hint" class="me-hint" hidden>Velg hvem du er først, så ser de andre hvem som krysset av.</p>
+    </header>
+
+    <div id="banner" class="banner" hidden></div>
+
+    <section id="week" class="week" aria-labelledby="week-title">
+      <div class="week-nav">
+        <button id="prev" class="nav-btn" type="button" aria-label="Forrige uke">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+        </button>
+        <div class="week-head">
+          <h2 id="week-title">Uke</h2>
+          <p id="week-sub" class="week-sub"></p>
+        </div>
+        <button id="next" class="nav-btn" type="button" aria-label="Neste uke">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+      <div class="week-meta">
+        <span id="week-rel" class="rel"></span>
+        <button id="today" class="link-btn" type="button" hidden>Gå til denne uka</button>
+      </div>
+      <div id="progress" class="progress"></div>
+      <div id="cards" class="cards"></div>
+    </section>
+
+    <section class="board" aria-labelledby="board-title">
+      <div class="section-head">
+        <h2 id="board-title">Scoreboard</h2>
+        <p class="section-sub">Flest fullførte uker leder. Uka som pågår teller først som glipp når den er over.</p>
+      </div>
+      <ol id="board" class="board-list"></ol>
+    </section>
+
+    <section class="history" aria-labelledby="hist-title">
+      <div class="section-head">
+        <h2 id="hist-title">Oversikt</h2>
+        <p class="section-sub">Hvem hadde hva, og ble det gjort? Trykk på en uke for å åpne den.</p>
+      </div>
+      <div class="table-scroll"><table id="hist" class="hist"></table></div>
+    </section>
+
+    <footer class="foot">
+      <p id="status" class="foot-status"></p>
+    </footer>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>
