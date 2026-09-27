@@ -2,7 +2,7 @@
 
 Vaskerotasjonen i kollektivet til Ådne, Kasper, Benjamin og Jonas.
 
-- Alle har én oppgave per uke: **Kjøkken**, **Bad**, **Støvsuging** (hele leiligheten) eller **Oppvaskmaskin** (ta ut).
+- Alle har én oppgave per uke: **Kjøkken**, **Bad**, **Støvsuging** (hele leiligheten) eller **Oppvaskmaskin og søppel** (ta ut av maskinen, og tøm og kast søppelet når det er fullt).
 - Oppgavene roterer hver mandag. Rotasjonen startet uke 40 (28. sep. 2026) med Ådne på kjøkken, Kasper på bad, Benjamin på støvsuging og Jonas på oppvaskmaskin.
 - Du krysser av når oppgaven din er gjort, og alle ser live hva som er gjort.
 - Scoreboardet viser hvem som har fullført flest uker. Oversikten viser de siste ukene og de neste.

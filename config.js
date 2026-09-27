@@ -35,10 +35,10 @@ export const TASKS = [
   },
   {
     id: 'oppvask',
-    name: 'Oppvaskmaskin',
+    name: 'Oppvaskmaskin og søppel',
     short: 'Oppvask',
     icon: 'plate',
-    desc: 'Ta ut av oppvaskmaskinen hver gang den er ferdig, hele uka.',
+    desc: 'Ta ut av oppvaskmaskinen hver gang den er ferdig, og tøm søppelet og kast det når det er fullt. Gjelder hele uka.',
   },
 ];
 
