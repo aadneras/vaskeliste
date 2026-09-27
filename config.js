@@ -45,14 +45,14 @@ export const TASKS = [
 // Mandagen rotasjonen starter (uke 40, 2026).
 export const START_MONDAY = '2026-09-28';
 
-// Lim inn firebaseConfig fra Firebase-konsollen her (se README.md).
-// Så lenge apiKey er 'LIM_INN_HER' kjører siden i demomodus,
+// firebaseConfig fra Firebase-konsollen (se README.md).
+// Settes apiKey til 'LIM_INN_HER' kjører siden i demomodus,
 // og avkrysninger lagres bare i nettleseren du bruker.
 export const firebaseConfig = {
-  apiKey: 'LIM_INN_HER',
-  authDomain: '',
-  projectId: '',
-  storageBucket: '',
-  messagingSenderId: '',
-  appId: '',
+  apiKey: 'AIzaSyBUw8VZy2XGvvd9pOI1AMYiS3uMmrLIleU',
+  authDomain: 'claude-f7c1f.firebaseapp.com',
+  projectId: 'claude-f7c1f',
+  storageBucket: 'claude-f7c1f.firebasestorage.app',
+  messagingSenderId: '251057958904',
+  appId: '1:251057958904:web:add69af81208812ac1f00d',
 };
